@@ -1,8 +1,8 @@
 import React from 'react'
 import { RecoilRoot } from 'recoil'
-import TodoList from './TodoList'
+import TodoList from './components/TodoList'
 
-function App() {
+const App = () => {
   return (
     <RecoilRoot>
       <TodoList />
