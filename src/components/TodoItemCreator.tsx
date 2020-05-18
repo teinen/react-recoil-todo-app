@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from 'react'
+import React, { useState } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { todoListState } from '../store'
 
@@ -18,7 +18,7 @@ const TodoItemCreator: React.FC = () => {
     setInputValue('')
   }
 
-  const onChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setInputValue(event.target.value)
   }
 

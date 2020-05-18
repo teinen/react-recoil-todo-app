@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react'
+import React from 'react'
 import { useRecoilState } from 'recoil'
 import { ITodoItem, todoListState } from '../store'
 
@@ -10,7 +10,7 @@ const TodoItem: React.FC<Props> = (props: Props) => {
   const [todoList, setTodoList] = useRecoilState(todoListState)
   const index = todoList.findIndex(todo => todo.id === props.item.id)
 
-  const editItemText = (event: ChangeEvent<HTMLInputElement>) => {
+  const editItemText = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newList = replaceItemAtIndex(todoList, index, {
       ...props.item,
       text: event.target.value
