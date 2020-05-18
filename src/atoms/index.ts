@@ -1,12 +1,12 @@
 import { atom } from 'recoil'
 
-export interface TodoItem {
+export interface ITodoItem {
   id: number
   text: string
   isComplete: boolean
 }
 
-const todoListState = atom<TodoItem[]>({
+const todoListState = atom<ITodoItem[]>({
   key: 'todoListState',
   default: []
 })

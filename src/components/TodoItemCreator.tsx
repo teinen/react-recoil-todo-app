@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { todoListState } from '../atoms'
 
-const TodoItemCreator = () => {
+const TodoItemCreator: React.FC = () => {
   const [inputValue, setInputValue] = useState('')
   const setTodoList = useSetRecoilState(todoListState)
 
@@ -15,6 +15,7 @@ const TodoItemCreator = () => {
         isComplete: false
       }
     ])
+    setInputValue('')
   }
 
   const onChange = (event: ChangeEvent<HTMLInputElement>) => {
