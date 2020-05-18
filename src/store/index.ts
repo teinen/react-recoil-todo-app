@@ -40,5 +40,6 @@ const filteredTodoListState = selector({
 
 export {
   todoListState,
+  todoListFilterState,
   filteredTodoListState
 }

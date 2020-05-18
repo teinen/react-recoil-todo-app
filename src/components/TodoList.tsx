@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRecoilValue } from 'recoil'
-import { todoListState } from '../store'
+import { filteredTodoListState } from '../store'
 
 import TodoListFilters from './TodoListFilters'
 import TodoItemCreator from './TodoItemCreator'
@@ -8,7 +8,7 @@ import TodoItem from './TodoItem'
 
 
 const TodoList: React.FC = () => {
-  const todoList = useRecoilValue(todoListState)
+  const filteredTodoList = useRecoilValue(filteredTodoListState)
 
   return (
     <>
@@ -17,7 +17,7 @@ const TodoList: React.FC = () => {
       <TodoItemCreator />
 
       <ul>
-        {todoList.map(todoItem => (
+        {filteredTodoList.map(todoItem => (
           <TodoItem item={todoItem} />
         ))}
       </ul>
