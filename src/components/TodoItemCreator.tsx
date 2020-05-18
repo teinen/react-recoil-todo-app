@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { todoListState } from '../atoms'
+import { todoListState } from '../store'
 
 const TodoItemCreator: React.FC = () => {
   const [inputValue, setInputValue] = useState('')

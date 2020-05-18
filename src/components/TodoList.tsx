@@ -2,7 +2,7 @@ import React from 'react'
 import { useRecoilValue } from 'recoil'
 import TodoItemCreator from './TodoItemCreator'
 import TodoItem from './TodoItem'
-import { todoListState } from '../atoms'
+import { todoListState } from '../store'
 
 
 const TodoList: React.FC = () => {

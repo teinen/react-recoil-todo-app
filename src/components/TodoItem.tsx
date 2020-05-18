@@ -1,6 +1,6 @@
 import React, { ChangeEvent } from 'react'
 import { useRecoilState } from 'recoil'
-import { ITodoItem, todoListState } from '../atoms'
+import { ITodoItem, todoListState } from '../store'
 
 type Props = {
   item: ITodoItem
